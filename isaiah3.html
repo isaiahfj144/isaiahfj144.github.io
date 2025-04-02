@@ -15,7 +15,7 @@ body {
 }
 div {
   height: 300px;
-  background-size: cover;
+  background-size: 100% 100%;
   position: relative;
   margin: 40px 0 0 0;
   border-radius: 12px;
@@ -77,6 +77,11 @@ small {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOUI8HySiSfcnLuYnZG292jw1J6kDF474Jw&s");
 
 }
+
+.snack{
+  background-image: url("https://shoprocketboyz.com/cdn/shop/files/RocketBoyz-ProductImages_1_medium.png?v=1734028472");
+
+}
 .price {
   float: right;
 }
@@ -133,6 +138,12 @@ font-size: 22px;
   <small>Other thing on the menu: Cheese cake, Oreo Cheese cake, Chocolate chip cookies, Red velvet cookies.</small></p>
 </div>
 
+<div class="snack">
+	<input type="number" min="0" style="width: 50px" class="quantities">
+  <p>Big foot <span class="price">$2</span><br />
+  <small>Other thing on the menu: hot cheetos, freeze dried skittles.</small></p>
+</div>
+
 
 <br><br>
    <input id="Name" type="username" placeholder="Your username">
@@ -174,7 +185,7 @@ import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.1.0
       const Email = document.querySelector("#Email")
       document.querySelector('#submit').addEventListener('click', Submit)
      const quantities = document.querySelectorAll(".quantities") 
-    const itemsList = ["Chicken and waffles", "Jerk chicken & side", "Red velvet"]
+    const itemsList = ["Chicken and waffles", "Jerk chicken & side", "Red velvet", "Big foot"]
     const prices = document.querySelectorAll(".price") 
 
    function Submit() {
